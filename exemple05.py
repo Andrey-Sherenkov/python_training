@@ -3,15 +3,24 @@
 # Если фирма отработала с прибылью, вычислите рентабельность выручки (соотношение прибыли к выручке).
 # Далее запросите численность сотрудников фирмы и определите прибыль фирмы в расчете на одного сотрудника.
 
-
-gross_profit = int(input('Введите выручку: '))
-costs = int(input('Введите издержки: '))
+while True:
+    try:
+        gross_profit = int(input('Введите выручку: '))
+        costs = int(input('Введите издержки: '))
+        break
+    except ValueError:
+        print("это некорректное число")
 profit = gross_profit - costs
-if profit >= 0:
+if profit > 0:
     print("прибыль составила:", profit)
     print("рентабельность выручки:", profit / gross_profit)
+    while True:
+        try:
+            number_of_employees = int(input('Введите численность сотрудников: '))
+            if number_of_employees > 0:
+                break
+        except ValueError:
+            print("это некорректное число")
+    print("прибыль на одного сотрудника:", profit / number_of_employees)
 else:
     print("убыток составил:", profit * -1)
-number_of_employees = int(input('Введите численность сотрудников: '))
-if profit >= 0:
-    print("прибыль на одного сотрудника:", profit / number_of_employees)
