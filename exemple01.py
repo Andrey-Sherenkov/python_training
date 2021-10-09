@@ -6,5 +6,10 @@ b = 20
 print(a - b)
 
 name = input("Введите имя >>>")
-age = int(input('Введите возраст >>>'))
+while True:
+    try:
+        age = int(input('Введите возраст >>>'))
+        break
+    except ValueError:
+        print("Oops! It doesn't look like a number!")
 print("Меня зовут", name, "мне", age, "лет")
