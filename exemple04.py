@@ -1,17 +1,8 @@
-# 4. Пользователь вводит целое положительное число. Найдите самую большую цифру в числе.
-# Для решения используйте цикл while и арифметические операции.
-while True:
-    try:
-        number = int(input('Введите целое положительное число: '))
-        if number > 0:
-            break
-    except ValueError:
-        print("Oops! It doesn't look like a number!")
+# 4. Пользователь вводит строку из нескольких слов, разделённых пробелами. Вывести каждое слово с новой строки.
+# Строки необходимо пронумеровать. Если в слово длинное, выводить только первые 10 букв в слове
 
-max_num = 0
+user_string = input("Введите строку из нескольких слов>>>")
+user_list = user_string.split(' ')  # input всегда строка для преобразования в list нужен split
 
-while number > 0:
-    if (number % 10) > max_num:
-        max_num = number % 10
-    number = number // 10
-print("наибольшее число:", max_num)
+for el in range(len(user_list)):
+    print(el + 1, " ", "{:.10}.".format(user_list[el]))
