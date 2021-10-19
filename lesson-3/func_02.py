@@ -13,3 +13,4 @@ def my_func(first_name, last_name, year_of_birth, citi, email, phone):
 
 
 my_func(*my_list)
+my_func(first_name="иван", last_name="иванов", year_of_birth="1999", citi="omsk", email="iii@mail.ru", phone=899999)
