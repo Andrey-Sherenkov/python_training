@@ -16,7 +16,7 @@ def f_def(*pos):
             def_val = pos[0] / pos[1]
             return def_val
         else:
-            return None
+            return "деление на ноль"
 
 
 while True:
