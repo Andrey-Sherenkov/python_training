@@ -3,7 +3,7 @@
 # Для выполнения расчета для конкретных значений необходимо запускать скрипт с параметрами.
 
 import sys
-from lesson_4 import my_library
+import my_library
 
 
 file, work_hours, rate_hours, prize = sys.argv

@@ -23,3 +23,15 @@ my_list = [randint(0, 1000) for x in range(10)]
 print("список", my_list)
 reduce(my_func, my_list)
 print("результат", var_list)
+
+
+# Другой вариант
+
+def get_right_max_list_func(src_list):
+    return [el for el in src_list[1:] if el > src_list[src_list.index(el) - 1]]
+
+
+my_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+max_list = get_right_max_list_func(my_list)
+print(my_list)
+print(max_list)

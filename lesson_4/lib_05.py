@@ -18,3 +18,10 @@ print(my_list)
 number = (reduce(my_func, my_list))
 print(number)
 
+#
+def mult_even_num_func(range_start, range_stop):
+    num_list = [el for el in range(range_start, range_stop + 1) if el % 2 == 0]
+    return reduce(lambda a, b: a * b, num_list)
+
+
+print(mult_even_num_func(100, 1000))
