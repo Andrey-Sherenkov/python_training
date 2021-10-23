@@ -24,3 +24,26 @@ try:
 
 except IOError:
     print("Произошла ошибка ввода-вывода!")
+
+
+# with open('test6.txt', 'r', encoding='utf-8') as read_file:
+#     res_dict = {}
+#     all_read_lines = read_file.readlines()
+#     for line in all_read_lines:
+#         if len(line):
+#             subject = line.split()
+#             hours_sum = 0
+#             for hours in subject[1:]:
+#                 if len(hours) > 1:
+#                     hours_sum += int(hours.split('(')[0])
+#             res_dict[subject[0]] = hours_sum
+#     print(f"\t{res_dict}\n")
+
+
+# with open('task6.txt', 'r', encoding='utf-8') as file:
+#     result = {}
+#     for line in file.readlines():
+#         subject, *lessons = line.split()
+#         total = sum([int(i.strip('(лабпр)')) for i in lessons if i.strip('(лабпр)').isdigit()])
+#         result.update({subject.strip(':'): total})
+#     print(result)

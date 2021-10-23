@@ -42,3 +42,49 @@ try:
             json.dump(my_list, write_f)
 except IOError:
     print("Произошла ошибка ввода-вывода!")
+
+
+
+# profit = {}
+# pr = {}
+# prof = 0
+# prof_aver = 0
+# i = 0
+# with open('l5.7_text.txt', 'r') as file:
+#     for line in file:
+#         name, firm, earning, damage = line.split()
+#         profit[name] = int(earning) - int(damage)
+#         if profit.setdefault(name) >= 0:
+#             prof = prof + profit.setdefault(name)
+#             i += 1
+#     if i != 0:
+#         prof_aver = prof / i
+#         print(f'Прибыль средняя - {prof_aver:.2f}')
+#     else:
+#         print(f'Прибыль средняя - отсутсвует. Все работают в убыток')
+#     pr = {'средняя прибыль': round(prof_aver)}
+#     profit.update(pr)
+#     print(f'Прибыль каждой компании - {profit}')
+#
+# with open('l5.7_json.json', 'w') as write_js:
+#     json.dump(profit, write_js)
+#
+#     js_str = json.dumps(profit)
+#     print(f'Создан файл с расширением json со следующим содержимым: \n '
+#           f' {js_str}')
+
+
+
+# with open('task7.txt', 'r', encoding='utf-8') as file:
+#     firms = {}
+#     total = []
+#     for line in file.readlines():
+#         firm, _, proceeds, costs = line.split()
+#         profit = float(proceeds) - float(costs)
+#         if profit > 0:
+#             total.append(profit)
+#         firms.update({firm: profit})
+#     avg_profit = round(sum(total) / len(total), 2)
+#     result = [firms, {'average profit': avg_profit}]
+#     with open('result.json', 'w', encoding='utf-8') as file_json:
+#         json.dump(result, file_json)

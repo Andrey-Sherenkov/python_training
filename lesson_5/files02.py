@@ -12,3 +12,10 @@ try:
         print("всего строк", count)
 except IOError:
     print("Произошла ошибка ввода-вывода!")
+
+
+# with open('task2.txt', 'r') as file:
+#     print(f'Всего строк - {len(file.readlines())}')
+#     file.seek(0)
+#     for i, l in enumerate(file, 1):
+#         print(f'{i} строка - {len(l.split())} слова')

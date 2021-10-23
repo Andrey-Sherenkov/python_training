@@ -24,3 +24,14 @@ except IOError:
 finally:
     my_obj.close()
     new_obj_new.close()
+
+
+# numbers = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыре'}
+#
+# with open('task4.txt', 'r', encoding='utf-8') as file, \
+#      open('result.txt', 'w', encoding='utf-8') as output:
+#     i = 0
+#     for line in file.readlines():
+#         i += 1
+#         number = line.split()[0]
+#         output.write(f'{numbers[number]} - {i}\n')
